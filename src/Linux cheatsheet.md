@@ -29,6 +29,7 @@
 3) rdiff-backup
 4) tmux
 5) screen to UART
+6) fail2ban
 
 
 <div style="page-break-after: always;"></div>
