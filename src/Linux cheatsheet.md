@@ -2,22 +2,23 @@
 ## Content
 1) [System information](#system-information)  
 2) [Hardware information](#hardware-information)  
-3) [Performance monitoring and statistics](#performance-monitoring-and-statistics)  
-4) [User information and management](#user-information-and-management)
-5) [File and directory command](#file-and-directory-commands)
+3) [Performance monitoring and statistics](#performance-monitoring-and-statistics)
+4) [Audio settings](#audio-settings)
+5) [User information and management](#user-information-and-management)
+6) [File and directory command](#file-and-directory-commands)
     - [Config files](#config-files)
-6) [Process management](#process-management)  
-7) [Networking](#networking)  
-8) [SSH management](#ssh-management) 
+7) [Process management](#process-management)  
+8) [Networking](#networking)  
+9) [SSH management](#ssh-management) 
     - [Client](#client)
     - [Server](#server)
     - [Tunnel](#ssh-tunneling)
     - [Proxy](#ssh-proxy)
-9) [Archives (tar files)](#archives-tar-files)  
-10) [Installing packages](#installing-packages)  
-11) [Search](#search)  
-12) [Remote work](#remote-work)  
-13) [FFMPEG](#ffmpeg)
+10) [Archives (tar files)](#archives-tar-files)  
+11) [Installing packages](#installing-packages)  
+12) [Search](#search)  
+13) [Remote work](#remote-work)  
+14) [FFMPEG](#ffmpeg)
     - [Summary](#summary)
     - [Codecs and containers](#codecs-and-containers)
     - [Examples](#examples)
@@ -30,6 +31,7 @@
 4) tmux
 5) screen to UART
 6) fail2ban
+7) cron
 
 
 <div style="page-break-after: always;"></div>
@@ -53,6 +55,9 @@
 
 
 # SYSTEM INFORMATION
+
+Main info
+>neofetch
 
 System monitor
 >htop
@@ -211,6 +216,67 @@ Display free and used memory ( -h for human readable, -m for MB, -g for GB.)
 
 Execute "df -h", showing periodic updates
 >watch df -h
+<div style="page-break-after: always;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# AUDIO SETTINGS
+
+Alsa = Advanced Linux Sound Architecture
+
+Terminal sound GUI
+>alsamixer
+
+install pulse audio daemon
+>sudo apt install pulseaudio
+
+Advanced sound settings
+>pavucontrol
+
+Loopback audio from microphone to speakers
+>pactl load-module module-loopback latency_msec=1
+
+Stop loopback
+>pactl unload-module module-loopback
+
+### Noise cancellation
+backup config file
+>sudo cp /etc/pulse/default.pa /etc/pulse/default.pa.backup
+
+modify config file
+>sudo vi /etc/pulse/default.pa
+
+by adding following lines:
+
+>load-module module-echo-cancel source_name=noechosource sink_name=noechosink
+>
+>set-default-source noechosource
+>
+>set-default-sink noechosink
+
+Last two lines will also get noise cancellation on your output device, and sometimes your audio won’t work and you will not hear sound. You will have to manually switch to output device which has no noise cancellation enabled. This is just a heads up, it is up to you to choose. I removed these two lines in my working environment.
+
+restart pulseaudio daemon or restart PC
+>sudo pulseaudio -k
+
+In settings set input device the one with noise cancellation
+
 <div style="page-break-after: always;"></div>
 
 
