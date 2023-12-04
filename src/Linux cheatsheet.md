@@ -592,6 +592,16 @@ Config of DNS server
 
 Allow port 80
 >ufw allow 80
+
+iptables list
+>iptables -L -v --line-numbers
+
+iptables delete first rule from chain INPUT
+>iptables -D INPUT 1
+
+iptables add rule to drop all incoming communication on tcp port 5672
+>iptables -I INPUT 1 -p tcp --dport 5672 -j DROP
+
 <div style="page-break-after: always;"></div>
 
 
