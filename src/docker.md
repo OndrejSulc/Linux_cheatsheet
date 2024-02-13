@@ -18,3 +18,8 @@ Build image on current platform with tag
 ```
 docker build . -f dockerfile
 ```
+
+Cross build images
+```
+docker buildx build  --build-arg="codeArtifactToken=$CODEARTIFACT_AUTH_TOKEN" --target	"container-build" --provenance=false --platform "linux/arm64" -t "npm-cache-try" -f ./Dockerfile .
+```
