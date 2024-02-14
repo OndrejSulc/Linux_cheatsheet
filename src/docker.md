@@ -10,7 +10,7 @@ docker image inspect <IMAGE ID> | grep Architecture
 
 Common build architectures:
 ```
-linux/amd64,linux/arm64
+linux/amd64,linux/arm64, linux/arm/v7, (linux/arm/v8 -- should be same as arm64)
 ```
 
 
@@ -21,5 +21,5 @@ docker build . -f dockerfile
 
 Cross build images
 ```
-docker buildx build  --build-arg="codeArtifactToken=$CODEARTIFACT_AUTH_TOKEN" --target	"container-build" --provenance=false --platform "linux/arm64" -t "npm-cache-try" -f ./Dockerfile .
+docker buildx build  --build-arg="argument=value" --target "container-build" --provenance=false --platform "linux/arm64" -t "tag-of-image" -f ./Dockerfile .
 ```
