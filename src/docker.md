@@ -23,3 +23,9 @@ Cross build images
 ```
 docker buildx build  --build-arg="argument=value" --target "container-build" --provenance=false --platform "linux/arm64" -t "tag-of-image" -f ./Dockerfile .
 ```
+
+Enable shell access if someone tries to disable/uninstall `sh` to prevent inspection
+```
+docker cp busybox container:/bin/busybox
+docker exec -it container /bin/busybox
+```
