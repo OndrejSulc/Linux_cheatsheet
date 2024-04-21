@@ -5,7 +5,12 @@ Device manager equivalent + benchmarking software
 hardinfo
 ```
 
-Disk usage
+Disk usage (general overview)
+```
+df -H
+```
+
+Disk usage (file by file incurrent dir)
 ```
 du -H
 ```
