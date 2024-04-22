@@ -20,9 +20,9 @@ List top 5 directories with the most disk usage to depth 1 (in the entire system
 du -BM --max-depth=1 / | sort -n | tail -n 5 
 ```
 
-List top 10 directories in current dir (`.`) subdir with the most disk usage to depth 3 (useful for docker)
+List top 10 directories in current dir (`.`) subdir with the most disk usage to depth 3 (use in `/var` - useful for docker)
 ```
-du -BM --max-depth=1 /var | sort -n | tail -n 5 
+du -BM --max-depth=3 . | sort -n | tail -n 5 
 ```
 
 Display messages in kernel ring buffer
