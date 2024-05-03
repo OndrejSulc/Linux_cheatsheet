@@ -45,6 +45,7 @@ docker buildx build  --build-arg="argument=value" --target "container-build" --p
 ```
 
 ## Cross build using buildx
+Buildx plugin installation
 ```
 export BUILDX_VERSION=$(curl --silent "https://api.github.com/repos/docker/buildx/releases/latest" |jq -r .tag_name) # get buildx version
 curl -JLO "https://github.com/docker/buildx/releases/download/$BUILDX_VERSION/buildx-$BUILDX_VERSION.linux-amd64" # pull buildx
