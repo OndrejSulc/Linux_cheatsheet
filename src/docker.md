@@ -44,4 +44,10 @@ Cross build images
 docker buildx build  --build-arg="argument=value" --target "container-build" --provenance=false --platform "linux/arm64" -t "tag-of-image" -f ./Dockerfile .
 ```
 
-
+## Cross build using buildx
+```
+export BUILDX_VERSION=$(curl --silent "https://api.github.com/repos/docker/buildx/releases/latest" |jq -r .tag_name) # get buildx version
+curl -JLO "https://github.com/docker/buildx/releases/download/$BUILDX_VERSION/buildx-$BUILDX_VERSION.linux-amd64" # pull buildx
+mkdir -p ~/.docker/cli-plugins # create folder for buildx
+mv "buildx-$BUILDX_VERSION.linux-amd64" ~/.docker/cli-plugins/docker-buildx # move buildx
+```
