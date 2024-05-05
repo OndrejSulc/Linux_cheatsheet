@@ -777,21 +777,42 @@ Extract a bzip2 compressed tar file.
 
 # INSTALLING PACKAGES
 
-Debian package managers: apt or yum 
+Debian package managers: apt
 Search for a package by keyword.
->apt search keyword
+```
+apt search keyword
+```
 
 Install package.
->apt install package
+```
+apt install package
+```
+
+Install package from local (.deb) file
+```
+apt install ./downloaded_package.deb
+```
 
 Display description and summary information about package.
->apt info package
-
-Install package from local file named package.rpm
->rpm -i package.rpm
+```
+apt info package
+```
 
 Remove/uninstall package.
->apt remove package
+```
+apt remove package
+```
+
+List installed packages
+```
+apt list --installed
+```
+
+List locally installed packages
+```
+apt list --installed | grep local
+```
+> rpi-imager/now 1.8.5 amd64 \[installed,`local`\]
 
 Install software from source code.
 >tar zxvf sourcecode.tar.gz  
