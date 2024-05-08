@@ -18,6 +18,12 @@ Crontab  is  the  program used to install, deinstall or list the tables used to 
 man crontab
 ```
 
+
+Create cron job
+```
+crontab -e
+```
+
 List my current cron jobs
 ```
 crontab -l
