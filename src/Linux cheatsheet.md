@@ -882,6 +882,11 @@ Search for process by name (use `echo $?` to check result)
 Start a screen session
 >screen
 
+Some terminal issues fixed with 
+```
+TERM=screen
+```
+
 Connect to serial port with baud rate (bits/s) 115200
 ```
 screen /dev/ttyS1 115200
