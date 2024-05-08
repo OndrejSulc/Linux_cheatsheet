@@ -882,6 +882,11 @@ Search for process by name (use `echo $?` to check result)
 Start a screen session
 >screen
 
+Connect to serial port with baud rate (bits/s) 115200
+```
+screen /dev/ttyS1 115200
+```
+
 Start named screen session
 >screen -S session_name
 
