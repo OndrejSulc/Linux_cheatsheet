@@ -543,6 +543,12 @@ Brings job n to the foreground
 Display all network interfaces and IP address
 >ip a
 
+Use network manager to setup static ip
+```
+sudo nmcli connection show
+sudo nmcli connection modify 'Wired connection 1' connection.autoconnect yes ipv4.method manual ipv4.address 192.168.2.199/24 ipv4.gateway 192.168.2.1 ipv4.dns 192.168.2.1
+sudo reboot
+```
 Display eth0 address and details
 >ip addr show dev eth0
 
