@@ -1,5 +1,12 @@
 # FFMPEG
 
+
+
+Get photo from RTSP stream
+```
+ffmpeg -y -rtsp_transport tcp -i rtsp://admin:admin@192.168.10.113:554/live -frames:v 1 do.jpg
+```
+
 ## Summary
 ```
 file name as last param     Output file/url
