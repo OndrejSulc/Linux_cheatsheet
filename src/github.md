@@ -4,7 +4,7 @@
 - User > settings > Developer settings > Personal access tokens > Fine-grained tokens
 - select repositories to grant access
 - add code + metadata access
-- add contents access
+- add contents read&write access
 - save generated token
 
 2) add token to repository with github action
