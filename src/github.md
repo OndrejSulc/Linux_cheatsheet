@@ -3,7 +3,8 @@
 1) create PAT token under user that as access to all those subrepositories
 - User > settings > Developer settings > Personal access tokens > Fine-grained tokens
 - select repositories to grant access
-- add add code + metadata access
+- add code + metadata access
+- add contents access
 - save generated token
 
 2) add token to repository with github action
