@@ -64,6 +64,10 @@ Compress to iamges.tar to images.tar.gz
 ```
 gzip images.tar
 ```
+or keep original images.tar
+```
+gzip --keep images.tar
+```
 
 Load images
 ```
