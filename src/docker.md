@@ -27,6 +27,11 @@ Delete unused images ( `-a` without any currently running container)
 docker system prune -a
 ```
 
+Image SHA digests (AWS ECR)
+```
+docker image ls --digests
+```
+
 
 Common build architectures:
 ```
@@ -42,6 +47,27 @@ docker build . -f dockerfile
 Cross build images
 ```
 docker buildx build  --build-arg="argument=value" --target "container-build" --provenance=false --platform "linux/arm64" -t "tag-of-image" -f ./Dockerfile .
+```
+
+## Export images
+List images to get IMAGE IDs
+```
+docker image ls
+```
+
+Save images to .tar
+```
+docker save -o images.tar <image1 id> <image2 id>
+```
+
+Compress to iamges.tar to images.tar.gz
+```
+gzip images.tar
+```
+
+Load images
+```
+docker load <images.tar.gz
 ```
 
 ## Cross build using buildx
