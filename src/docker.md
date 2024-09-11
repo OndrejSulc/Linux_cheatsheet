@@ -8,6 +8,11 @@ docker image inspect <IMAGE ID> | grep Architecture
         "Architecture": "arm64",
 ```
 
+Display docker engine info
+```
+docker info
+```
+
 ## Containers management
 
 Stop all currently running containers
@@ -20,6 +25,12 @@ Enable shell access if someone tries to disable/uninstall `sh` to prevent inspec
 docker cp busybox <containerId>:/bin/busybox
 docker exec -it <containerId> /bin/busybox
 ```
+
+Resources used by containers
+```
+docker stats
+```
+
 
 ## Images management
 Delete unused images ( `-a` without any currently running container)
