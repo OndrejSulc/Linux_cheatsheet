@@ -8,6 +8,11 @@ Start a screen session
 screen
 ```
 
+Proper size of screen (usually for serial port) - add line line in `/etc/profile`
+```
+shopt -s checkwinsize
+```
+
 Some terminal issues fixed with 
 ```
 TERM=screen
