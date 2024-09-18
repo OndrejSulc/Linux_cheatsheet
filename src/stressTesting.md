@@ -12,3 +12,8 @@ WebGL samples [https://webglsamples.org/]
 
 ### FPS
 [https://www.testufo.com/framerates#count=2&background=stars&pps=960]
+
+
+### Browser
+custom browsers testing website
+[https://browserleaks.com/features]
