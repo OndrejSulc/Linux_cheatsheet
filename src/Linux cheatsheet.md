@@ -297,6 +297,16 @@ Show who is logged into the system.
 Show who is logged in and what they are doing.
 >w
 
+Check groups of user
+```
+getent group | grep <user>
+```
+
+Check which users belong to group
+```
+getent group | grep <group>
+```
+
 Change password
 >passwd
 
