@@ -76,6 +76,12 @@ Show info about ATA disk (/dev/sda)
 hdparm -i /dev/sda
 ```
 
+## Temperature
+Check CPU temperature without 3rd party software (58000 = 58°C)
+```
+cat /sys/class/thermal/thermal_zone*/temp
+```
+
 Perform a read speed test on disk sda
 ```
 hdparm -tT /dev/sda
