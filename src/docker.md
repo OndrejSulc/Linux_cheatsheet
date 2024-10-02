@@ -55,7 +55,14 @@ Build image on current platform with tag
 docker build . -f dockerfile
 ```
 
-Cross build images
+## Cross build images
+
+Build for multiple platforms and push to AWS ECR
+```
+docker buildx build . -f Dockerfile -t 112233445566.dkr.ecr.us-east-1.amazonaws.com/<ecr/registry> --platform linux/arm64,linux/amd64 --push
+```
+
+older example
 ```
 docker buildx build  --build-arg="argument=value" --target "container-build" --provenance=false --platform "linux/arm64" -t "tag-of-image" -f ./Dockerfile .
 ```
