@@ -1,4 +1,4 @@
-
+# Yocto
 ```
-./buildPrayerclock.sh "bitbake linux-ktn:do_configure -f"
+kas shell <kas config path> -c "bitbake virtual-kernel:do_configure -f"
 ```
