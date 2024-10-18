@@ -1,5 +1,8 @@
 # Docker
 
+1) [Docker compose](#docker-compose)
+-----
+
 Get architecture of docker container:
 ```
 docker ps
@@ -99,4 +102,12 @@ export BUILDX_VERSION=$(curl --silent "https://api.github.com/repos/docker/build
 curl -JLO "https://github.com/docker/buildx/releases/download/$BUILDX_VERSION/buildx-$BUILDX_VERSION.linux-amd64" # pull buildx
 mkdir -p ~/.docker/cli-plugins # create folder for buildx
 mv "buildx-$BUILDX_VERSION.linux-amd64" ~/.docker/cli-plugins/docker-buildx # move buildx
+```
+
+
+# Docker compose
+Docker compose supports default value if variable is not set
+```
+    volumes:
+      ${VARIABLE:-/dev/null}:/app/folder
 ```
