@@ -40,6 +40,14 @@ sudo systemctl restart xrdp
 sudo systemctl enable xrdp
 ```
 
+Debug logs
+```
+tail -n 20 <any of following>
+~/.xsession-errors
+/var/log/xrdp.log
+/var/log/xrdp-sesman.log
+```
+
 ## Setup client
 
 Remmina is default client for remote desktop.
