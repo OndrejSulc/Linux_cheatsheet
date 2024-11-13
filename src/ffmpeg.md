@@ -1,5 +1,9 @@
 # FFMPEG
 
+Get photo from web camera
+```
+fswebcam test1.jpg
+```
 
 
 Get photo from RTSP stream
