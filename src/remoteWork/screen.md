@@ -92,3 +92,11 @@ ALT + A	To select text. You can combine this command with CTRL + K to cut a spec
 ```
 
 <div style="page-break-after: always;"></div>
+
+
+## Transfer file
+clipboard copy
+- Copy your data to the clipboard.
+- Run cat > /your/file/path in the terminal window
+- Paste the contents to the terminal window
+- Press press Ctrl + D.
