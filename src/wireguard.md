@@ -30,15 +30,36 @@ systemctl enable wg-quick@wg0.service
 ```
 
 
-Config file wg0.conf (name of file determines name of created network interface)
+Peer behind NAT config file wg0.conf (name of file determines name of created network interface)
 ```
 [Interface]
-Address = <assigned address with CIDR>
+Address = <assigned address with CIDR> #192.168.10.2/32
 PrivateKey = <your private key>
 
 [Peer]
-PublicKey = <server public vpn key>
-AllowedIPs = 10.0.0.0/16 #which ip addresses
-Endpoint = 10.20.30.40:51820 #endpoint with VPN server
+PublicKey = <server public vpn key> 
+AllowedIPs = 192.168.10.0/24 #which ip addresses
+Endpoint = 10.20.30.40:<server port> #public endpoint with VPN server
 PersistentKeepalive = 25 (optional for endpoint devices to ping every 25s to keep connection active)
 ```
+
+Peer with public IP
+```
+[Interface]
+Address = 192.168.10.1/32
+SaveConfig = true
+ListenPort = <server port>
+PrivateKey = <server public vpn key> 
+# Some PostUp and PreDown rules should be added.
+
+[Peer]
+PublicKey = <peer pub key>
+AllowedIPs = 192.168.10.3/32
+Endpoint = 10.20.30.41:<server port> #public endpoint with VPN server
+
+[Peer]
+PublicKey = <peer pub key>
+AllowedIPs = 192.168.10.2/32
+PersistentKeepalive = 25 # just in case other side forgot it
+```
+
