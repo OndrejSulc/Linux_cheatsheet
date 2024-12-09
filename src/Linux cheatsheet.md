@@ -711,6 +711,15 @@ This will open a tunnel from localhost to host1 through which the SSH service on
 >ssh -L 9999:localhost:1234 -N -p 9998 localhost
 
 
+If host 1 has service available for locahost, take it and provide it on your locahost.
+```
+# provide it on localhost of your machine only
+ssh -L 127.0.0.1:<local-port>:127.0.0.1:<remote-app-port> -N login@host1
+
+# or provide it on all interfaces
+ssh -L 0.0.0.0:<local-port>:127.0.0.1:<remote-app-port> -N login@host1
+```
+
 ## SSH proxy
 Dynamic or multi-port forwarding
 
