@@ -726,13 +726,17 @@ Dynamic or multi-port forwarding
 List used ports:
 >sudo lsof -i -P -n | grep LISTEN
 
-Create socket on localhost:1080
->ssh -D 1080 remoteServer
+Create SOCKS5 socket on localhost:9876
+>ssh -D 9876 remoteServer
 
-Wherever any request comes to localhost:1080, it is forwarded to remoteServer which asks on behalf of original user
+Wherever any request comes to localhost:9876, it is forwarded to remoteServer which asks on behalf of original user
+
+```
+chromium --proxy-server="socks5://127.0.0.1:9876"
+```
 
 For example create dynamic tunel with previous command.
-In brower go to network configuration a set SOCKS proxy server to LOCALHOST:1080
+In brower go to network configuration a set SOCKS proxy server to LOCALHOST:9876
 Now every request will got through remoteServer first.
 
 
