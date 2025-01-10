@@ -1,5 +1,11 @@
 # OpenSSL
 
+## Print info
+
+```
+openssl x509 -in file.pem.crt -text -noout
+```
+
 ## Self CA setup
 
 Generate CA cert and key
@@ -34,3 +40,5 @@ We can also sign that .csr request with our own CA key but it won't be trusted b
 ```
 openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days <duration>
 ```
+
+
