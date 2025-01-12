@@ -10,9 +10,9 @@ Disk usage (general overview)
 df -H
 ```
 
-Disk usage (file by file incurrent dir)
+Directory size
 ```
-du -H
+du -sh <directory>
 ```
 
 List top 5 directories with the most disk usage to depth 1 (in the entire system - `/`)
