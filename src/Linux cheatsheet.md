@@ -761,18 +761,21 @@ Now every request will got through remoteServer first.
 
 # ARCHIVES (TAR FILES)
 
+### raw tar (no compression)
 Create tar named archive.tar containing directory.
 >tar cf archive.tar directory
 
 Extract the contents from archive.tar.
 >tar xf archive.tar
 
+### tar + gzip
 Create a gzip compressed tar file name archive.tar.gz.
 >tar czf archive.tar.gz directory
 
 Extract a gzip compressed tar file.
 >tar xzf archive.tar.gz
 
+### tar + bzip2
 Create a tar file with bzip2 compression
 >tar cjf archive.tar.bz2 directory
 
