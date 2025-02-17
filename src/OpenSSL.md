@@ -41,4 +41,9 @@ We can also sign that .csr request with our own CA key but it won't be trusted b
 openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days <duration>
 ```
 
+## Conversion
 
+Convert from .crt to .pem
+```
+openssl x509 -in mycert.crt -out mycert.pem -outform PEM
+```
