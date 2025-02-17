@@ -10,20 +10,20 @@ openssl x509 -in file.pem.crt -text -noout
 
 Generate CA cert and key
 ```
-openssl req -new -x509 -days <duration> -extensions v3_ca -keyout ca.key -out ca.crt
+openssl req -x509 -newkey rsa:4096 -keyout ca_key.pem -out ca_cert.pem -sha256 -days <duration>
 ```
 
 ## Key generation
 
 Generate private (server or client) RSA key that is encrypted with AES256
 ```
-openssl genrsa -aes256 -out server.key 2048
+openssl genrsa -aes256 -out server.key 4096
 ```
 > server.key
 
 Generate private (server or client) RSA key without encryption
 ```
-openssl genrsa -out server.key 2048
+openssl genrsa -out server.key 4096
 ```
 > server.key
 
