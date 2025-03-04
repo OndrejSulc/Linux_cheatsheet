@@ -104,6 +104,11 @@ mkdir -p ~/.docker/cli-plugins # create folder for buildx
 mv "buildx-$BUILDX_VERSION.linux-amd64" ~/.docker/cli-plugins/docker-buildx # move buildx
 ```
 
+## Networking
+```
+docker network disconnect [OPTIONS] NETWORK CONTAINER
+docker network connect --ip 192.168.150.3 NETWORK CONTAINER
+```
 
 # Docker compose
 Docker compose supports default value if variable is not set
