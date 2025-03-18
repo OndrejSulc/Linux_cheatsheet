@@ -1,5 +1,19 @@
 # VS Code configs
 
+## Key shortcuts
+
+collapse all ranges of specified indent
+```
+ctrl + k + 0..3
+```
+
+uncollapse all ranges
+```
+ctrl + k + j
+```
+
+
+## Config
 .vscode/settings.json
 ```
 "files.exclude": {
