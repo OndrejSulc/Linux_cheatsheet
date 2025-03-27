@@ -17,3 +17,13 @@ sudo apt install virt-manager
 ## New device
 https://wiki.debian.org/QEMU
 
+Create hard disk image
+```
+$ qemu-img create debian.img 2G
+```
+
+
+Run image
+```
+qemu-system-x86_64 -hda debian.img -m 4G
+```
