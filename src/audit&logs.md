@@ -1,5 +1,12 @@
 # System audit and logs
 
+
+## log hacks
+
+```
+echo "now" >current_time_$(date +"%Y-%m-%d-%H-%M").txt
+```
+
 ## Login tracking and user activity
 
 ### Important files
