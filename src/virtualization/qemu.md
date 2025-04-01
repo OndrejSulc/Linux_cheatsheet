@@ -27,3 +27,6 @@ Run image
 ```
 qemu-system-x86_64 -hda debian.img -m 4G
 ```
+
+## Shared clipboard
+provided by spice-vdagentd running and a spice-vdagent per x11 session
