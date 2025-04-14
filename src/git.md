@@ -2,11 +2,21 @@
 
 - gitk
 
-gui search in terminal
+
+Pull all submodules accordign to .gitmodules branch
+```
+git submodule update --remote --recursive
+
+
+
+# TIG
+
+Commit history tree
 ```
 tig
 ```
 
-Pull all submodules accordign to .gitmodules
+Jump to specific commit
 ```
-git submodule update --recursive -
+:goto <commit-hash>
+```
