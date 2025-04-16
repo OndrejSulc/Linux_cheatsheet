@@ -1,8 +1,11 @@
 # Disk recovery
 
+## Sources
+https://wiki.archlinux.org/title/File_recovery
+
 ## Backup and restore
 
-compressed disk copy
+compressed disk copy (assuming healthy disk - otherwise use ddrescue)
 ```
 dd if=/dev/INPUT/DEVICE-NAME-HERE conv=sync,noerror bs=64K | gzip -c > /path/to/my-disk.image.gz
 ```
@@ -29,3 +32,6 @@ Print disk info
 ```
 smartctl -x /dev/sdd
 ```
+
+## Carving
+https://wiki.archlinux.org/title/Foremost
