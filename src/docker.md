@@ -75,25 +75,16 @@ List images to get IMAGE IDs
 ```
 docker image ls
 ```
-
-Save images to .tar
+Save image(s) to .tar.gz
 ```
-docker save -o images.tar <image1 id> <image2 id>
-```
-
-Compress to iamges.tar to images.tar.gz
-```
-gzip images.tar
-```
-or keep original images.tar
-```
-gzip --keep images.tar
+docker save myimage:latest  <image1 id> <image2 id> | gzip > myimage_latest.tar.gz
 ```
 
 Load images
 ```
 docker load <images.tar.gz
 ```
+
 
 ## Cross build using buildx
 Buildx plugin installation
