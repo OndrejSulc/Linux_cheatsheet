@@ -10,6 +10,11 @@ Add new ethernet connection bound to inteface eth1
 nmcli connection add type ethernet con-name my_ethernet1 ifname eth1
 ```
 
+Add new wwan0 connection
+```
+nmcli connection add type gsm ifname wwan0 con-name my_wwan0
+```
+
 ## Configuration files
 connections are stored in `/etc/NetworkManager/system-connections/<file>.nmconnection` files
 
