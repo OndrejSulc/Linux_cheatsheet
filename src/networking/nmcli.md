@@ -25,3 +25,17 @@ plugins=ifupdown,keyfile
 [ifupdown]
 managed=true
 ```
+
+
+## Manually created GSM connection
+
+```
+nmcli connection edit type gsm con-name "My GSM Connection"
+```
+
+```
+#(Inside the config tool)
+set gsm.apn internet.t-mobile.cz
+```
+
+
