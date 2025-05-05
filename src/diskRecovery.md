@@ -15,9 +15,15 @@ write back
 gunzip -c IMAGE.HERE-GZ | dd of=/dev/OUTPUT/DEVICE-HERE
 ```
 
-send remote image storage
+send image to remote storage
 ```
 dd if=/dev/INPUT conv=sync,noerror bs=64K | gzip -c | ssh <user>@<ip> 'dd of=myimage.image.gz'
+```
+
+create disk image from disk on remote server
+(note `sudo`) - might be needed to temporarily set passwordless sudo
+```
+ssh <user>@<ip> "sudo dd if=/dev/INPUT conv=sync,noerror bs=64K | gzip -c" > myimage.image.gz
 ```
 
 
