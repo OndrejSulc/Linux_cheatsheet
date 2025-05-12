@@ -9,6 +9,11 @@ git submodule update --remote --recursive
 ```
 
 
+Search history of one file (or submodule)
+```
+git log -p -- <file>
+```
+
 # TIG
 
 Commit history tree
