@@ -21,3 +21,6 @@ kas lock config_file.yml
 
 
 kas shell config_file.yml -c "bitbake-layers show-recipes"
+
+see how specific recipe is built
+kas shell config_file.yml  -c "bitbake -c compile -v chromium-x11"
