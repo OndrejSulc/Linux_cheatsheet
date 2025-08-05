@@ -28,6 +28,11 @@ Show recipes available in KAS config
 kas shell config_file.yml -c "bitbake-layers show-recipes"
 ```
 
+Show layers available in KAS config
+```
+kas shell config_file.yml -c "bitbake-layers show-layers"
+```
+
 see how specific recipe is built
 ```
 kas shell config_file.yml  -c "bitbake -c compile -v chromium-x11"
