@@ -14,6 +14,11 @@ Search history of one file (or submodule)
 git log -p -- <file>
 ```
 
+Check history of checkouts
+```
+git reflog | grep checkout
+```
+
 # TIG
 
 Commit history tree
