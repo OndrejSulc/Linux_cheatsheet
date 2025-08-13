@@ -3,6 +3,11 @@
 kas shell <kas config path> -c "bitbake virtual-kernel:do_configure -f"
 ```
 
+## bmap tools
+
+```
+sudo bmaptool copy image.img --bmap image.bmap /dev/sdX
+```
 
 ## Kernel configuration
 
