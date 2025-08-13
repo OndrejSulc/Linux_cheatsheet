@@ -3,6 +3,11 @@
 kas shell <kas config path> -c "bitbake virtual-kernel:do_configure -f"
 ```
 
+## File watches
+```
+echo "165536" | sudo tee /proc/sys/fs/inotify/max_user_watches
+```
+
 ## bmap tools
 
 ```
