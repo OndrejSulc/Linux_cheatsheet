@@ -13,6 +13,20 @@ echo "165536" | sudo tee /proc/sys/fs/inotify/max_user_watches
 ```
 sudo bmaptool copy image.img --bmap image.bmap /dev/sdX
 ```
+## Build KAS config
+add to `local_conf_header:`
+```
+  quicker: |
+    # What SSTATE_DIR should be used (use your own path instead)
+    SSTATE_DIR ?= "/media/ondra/dalsimisto/lgmc-edge-images/lgmc-edge-images/sstate-cache"
+
+    # Limit BitBake to 10 parallel tasks
+    BB_NUMBER_THREADS = "9"
+
+    # Limit make (used during compilation) to 10 threads
+    PARALLEL_MAKE = "-j9"
+```
+
 
 ## Kernel configuration
 
