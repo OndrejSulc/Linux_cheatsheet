@@ -26,7 +26,32 @@ Commit history tree
 tig
 ```
 
+Help
+```
+esc + h
+```
+
+Options
+```
+Option toggling:
+    shift + D :toggle date
+    shift + A :toggle author
+    shift + X :toggle id
+    shift + G :toggle commit-title-graph
+```
+
+
+
+
 Jump to specific commit
 ```
 :goto <commit-hash>
+```
+
+Controls:
+```
+arrow up,down = prev, next commit
+INS and DEL = scrolling in selected commit by one line
+PGUP PGDN = scrolling in selected commit
+
 ```
