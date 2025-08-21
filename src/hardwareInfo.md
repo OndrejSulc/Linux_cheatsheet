@@ -86,3 +86,19 @@ Perform a read speed test on disk sda
 ```
 hdparm -tT /dev/sda
 ```
+
+
+
+## Move /var to bigger partition
+1) `fdisk` to create new partition in free space
+2) `mkfs.ext4 /dev/sdaX` to format it
+3) `mount /dev/sdaX /mnt` to mount it
+4) `cp /var /mnt -r` copy content of var
+5) `blkid /dev/sdaX` get UUID of partition
+6) edit `/etc/fstab` so /var is always mounted correctly
+```
+UUID=uuid-from-blkid   /var   ext4   defaults   0   2
+```
+
+
+
