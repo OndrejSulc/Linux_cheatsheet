@@ -8,6 +8,10 @@ Pull all submodules accordign to .gitmodules branch
 git submodule update --remote --recursive
 ```
 
+Pull all submodules according to commit
+```
+git submodule update  --recursive
+```
 
 Search history of one file (or submodule)
 ```
