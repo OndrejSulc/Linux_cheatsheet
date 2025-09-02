@@ -692,6 +692,12 @@ Restart ssh server
 
 SSH public keys usable for login to specific user are in file: `~/.ssh/authorized_keys`
 
+## SSH FS
+```
+sshfs -o IdentityFile=/path/rsa_key user@10.0.0.0:/home/mount ./sshmount/
+```
+
+
 ## SSH tunneling
 This will open tunnel from local port 9000 to remote port 25 of mail.server.com
 > ssh -L 9000:remoteserver.com:25 
