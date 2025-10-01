@@ -101,6 +101,14 @@ docker network disconnect [OPTIONS] NETWORK CONTAINER
 docker network connect --ip 192.168.150.3 NETWORK CONTAINER
 ```
 
+
+## Logs
+
+clear logs of container
+```
+echo "" > $(docker inspect --format='{{.LogPath}}' <container_name_or_id>)
+```
+
 # Docker compose
 Docker compose supports default value if variable is not set
 ```
