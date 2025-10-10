@@ -13,6 +13,11 @@ Pull all submodules according to commit
 git submodule update  --recursive
 ```
 
+reset hard all submodules
+```
+git submodule foreach --recursive git reset --hard
+```
+
 Search history of one file (or submodule)
 ```
 git log -p -- <file>
