@@ -9,10 +9,13 @@ echo "165536" | sudo tee /proc/sys/fs/inotify/max_user_watches
 ```
 
 ## bmap tools
-
+1) umount the device first but do not eject so it still appears in `lsblk`
+2) use bmap tool to copy image to the device
 ```
+sudo bmaptool copy image.hddimg --nobmap /dev/sdc
 sudo bmaptool copy image.img --bmap image.bmap /dev/sdX
 ```
+
 ## Build KAS config
 add to `local_conf_header:`
 ```
