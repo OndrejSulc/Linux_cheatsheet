@@ -5,4 +5,30 @@ Install
 sudo apt install fail2ban
 ```
 
+-------------------
+#### Check count of jails (only sshd is enabled by default)
+```
+fail2ban-client status
+```
+output:
+> Status  
+> |- Number of jail:	1  
+> `- Jail list:	sshd
 
+------------
+#### Check specific jail status (sshd)
+```
+fail2ban-client status sshd
+```
+output:
+```
+  Status for the jail: sshd
+  |- Filter
+  |  |- Currently failed:	1
+  |  |- Total failed:	68
+  |  `- Journal matches:	_SYSTEMD_UNIT=ssh.service + _COMM=sshd
+  `- Actions
+     |- Currently banned:	3
+     |- Total banned:	10
+     `- Banned IP list:	2.57.121.25 2.57.121.112 165.154.233.77
+```
