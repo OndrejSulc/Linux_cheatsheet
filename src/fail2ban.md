@@ -32,3 +32,26 @@ output:
      |- Total banned:	10
      `- Banned IP list:	2.57.121.25 2.57.121.112 165.154.233.77
 ```
+
+
+------------------------------
+#### List of IP addresses which attempted to login
+
+```
+journalctl -u ssh.service | grep -E "Accepted|Failed" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sort | uniq -c | sort -nr
+```
+output:
+```
+476 165.154.233.77
+307 206.189.110.212
+240 41.94.88.219
+106 45.135.232.92
+```
+
+
+----------------------------------
+#### Ban IP
+```
+fail2ban-client set sshd banip 165.154.233.77
+```
+
