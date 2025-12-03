@@ -9,6 +9,13 @@ echo "165536" | sudo tee /proc/sys/fs/inotify/max_user_watches
 ```
 
 ## bmap tools
+
+install bmaptools
+```
+sudo apt update
+sudo apt install bmap-tools
+```
+
 1) umount the device first but do not eject so it still appears in `lsblk`
 2) use bmap tool to copy image to the device
 ```
