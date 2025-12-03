@@ -17,3 +17,17 @@ pwgen -cns1v 20
 - "Passwords" (GNOME Keyring data) are stored in ~/.local/share/keyrings
 - "Secure Shell" data (SSH keys) are stored in ~/.ssh
 - "PGP Keys" (including GPG keys) are stored in ~/.gnupg
+
+
+### GNOME Keyrings
+
+Backup
+
+```
+tar czf keyrings_backup.tar.gz ~/.local/share/keyrings/
+```
+
+Restore
+```
+tar xzf keyrings_backup.tar.gz -C ~/
+```
