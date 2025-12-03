@@ -26,6 +26,18 @@ create disk image from disk on remote server
 ssh <user>@<ip> "sudo dd if=/dev/INPUT conv=sync,noerror bs=64K | gzip -c" > myimage.image.gz
 ```
 
+Create raw image and bmap in one go
+```
+dd if=/dev/sdX bs=4M status=progress \
+  | tee >(bmaptool create - > disk.img.bmap) \
+  | gzip -9 > disk.img.gz
+
+```
+
+Bmap flash later automatically uses equal named .bmap file otherwise --no-bmap has to be used
+```
+bmaptool copy disk.img.gz /dev/sdY
+```
 
 ## Analysis
 
