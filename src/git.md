@@ -18,6 +18,16 @@ reset hard all submodules
 git submodule foreach --recursive git reset --hard
 ```
 
+submodules after git clone
+Initialize and update submodules
+```
+git submodule init
+git submodule update
+```
+`git submodule init` → registers the submodules listed in .gitmodules.  
+`git submodule update` → fetches the submodule content and checks out the appropriate commit.
+
+
 Search history of one file (or submodule)
 ```
 git log -p -- <file>
