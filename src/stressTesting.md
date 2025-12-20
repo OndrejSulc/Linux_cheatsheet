@@ -17,3 +17,8 @@ WebGL samples [https://webglsamples.org/]
 ### Browser
 custom browsers testing website
 [https://browserleaks.com/features]
+
+check GPU performance
+```
+chrome://gpu/
+```
