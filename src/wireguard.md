@@ -63,3 +63,9 @@ AllowedIPs = 192.168.10.2/32
 PersistentKeepalive = 25 # just in case other side forgot it
 ```
 
+
+Firewall routing on server
+```
+sudo ufw route allow in on wg0 out on wg0
+```
+
