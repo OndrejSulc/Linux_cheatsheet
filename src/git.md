@@ -27,6 +27,10 @@ git submodule update
 `git submodule init` → registers the submodules listed in .gitmodules.  
 `git submodule update` → fetches the submodule content and checks out the appropriate commit.
 
+Remove submodule
+```
+git rm <path to submodule>
+```
 
 Search history of one file (or submodule)
 ```
