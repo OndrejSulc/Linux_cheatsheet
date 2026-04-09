@@ -8,6 +8,12 @@ kas shell <kas config path> -c "bitbake virtual-kernel:do_configure -f"
 echo "165536" | sudo tee /proc/sys/fs/inotify/max_user_watches
 ```
 
+permanently increase max user watches by adding following to `/etc/sysctl.d/90-override.conf`
+```
+fs.inotify.max_user_watches=524288
+```
+
+
 ## bmap tools
 
 install bmaptools
