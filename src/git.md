@@ -2,6 +2,7 @@
 
 - gitk
 
+## Submodules
 
 Pull all submodules accordign to .gitmodules branch
 ```
@@ -41,6 +42,17 @@ Check history of checkouts
 ```
 git reflog | grep checkout
 ```
+
+## Git branch
+
+Change commit to which the branch points to.  
+*If new-tip-commit is omitted, it defaults to the current commit. new-tip-commit can be a branch name (e.g., master, origin/master)*
+```
+git branch --force <branch-name> [<new-tip-commit>]
+```
+
+
+
 
 # TIG
 
