@@ -61,6 +61,11 @@ Commit history tree
 tig
 ```
 
+see all branches
+```
+tig --all
+```
+
 Help
 ```
 esc + h
@@ -85,6 +90,7 @@ Jump to specific commit
 
 Controls:
 ```
+r = overview all branches
 arrow up,down = prev, next commit
 INS and DEL = scrolling in selected commit by one line
 PGUP PGDN = scrolling in selected commit
